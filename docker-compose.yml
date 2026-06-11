@@ -1,0 +1,12 @@
+services:
+  nist-pipeline:
+    build: .
+    image: nist-rev5-pipeline:latest
+    ports:
+      - "3001:3001"
+    env_file:
+      - server/.env
+    volumes:
+      # Persist documented-controls progress across container restarts
+      - ./server/data:/app/server/data
+    restart: unless-stopped

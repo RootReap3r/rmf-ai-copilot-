@@ -1,0 +1,19 @@
+{
+  "name": "nist-pipeline-server",
+  "version": "1.0.0",
+  "description": "Backend for NIST 800-53 Rev4->Rev5 AI migration pipeline. Provider-agnostic LLM proxy + local JSON storage.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
